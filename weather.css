@@ -103,3 +103,22 @@ P{
     color: #ff0000;
     font-weight: bold;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        display:inline;
+        max-width: 50px;
+        overflow-x: hidden;
+    }
+
+    .weatherform {
+        max-width: 20%;
+        padding: 2px;
+        box-shadow: none;
+        width: 100px;
+    }
+
+    .card{
+        width: 87%;
+    }
+}
