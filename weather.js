@@ -46,7 +46,8 @@ function displayWeatherInfo(data) {
     const { main:{temp, humidity}, 
          weather:description,id, 
             wind:{speed}, 
-            name:city } = data;
+            name:city,
+           sys: {country}} = data;
 
     card.textContent = "";
     card.style.display = `block`;
@@ -57,7 +58,7 @@ function displayWeatherInfo(data) {
     const descDislay = document.createElement(`p`);
     const emojiDislay = document.createElement(`p`);
 
-    cityDislay.textContent = city;
+    cityDislay.textContent = `${city}(${country})`;
     tempDislay.textContent = `Temperature: ${(temp).toFixed(1)}°C`;
     humidityDislay.textContent = `Humidity: ${humidity}%`;
     descDislay.textContent = `Windspeed: ${speed} m/s`;
