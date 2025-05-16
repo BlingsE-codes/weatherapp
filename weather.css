@@ -23,6 +23,7 @@ body{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     background-color: #ccc;
+
 }
 
 button[type = "submit"]{
@@ -94,6 +95,7 @@ P{
     color: #333;
     font-weight: bold;
     margin: 0%;
+
 }
 
 .errorDisplay{
@@ -102,8 +104,10 @@ P{
     padding: 10px;
     color: #ff0000;
     font-weight: bold;
-}
 
+
+
+}
 @media screen and (max-width: 600px) {
     body {
         display:inline;
@@ -121,4 +125,17 @@ P{
     .card{
         width: 87%;
     }
+}
+
+.img1{
+    width: 20px;
+}
+
+#address{
+    margin-top: 5px;
+
+}
+
+#img3{
+    width: 80px;
 }
