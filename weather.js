@@ -6,6 +6,8 @@ const weatherInput = document.querySelector(`.cityInput`);
 const card = document.querySelector(`.card`);
 const apiKey = `e3502c50ace75a07be35f0e51d7fb371`;
 
+
+
 waetherForm.addEventListener(`submit`, async event => {
     event.preventDefault();
     const city = weatherInput.value;
@@ -34,7 +36,7 @@ async function getWeatherData(city) {
     const response = await fetch(apiUrl);
 
     if (!response.ok) {
-        throw new Error(`Could not fetching weather data`);
+        throw new Error(`${city} is NOT a city/Country.`);
     }
     return await response.json();
 }
@@ -47,7 +49,7 @@ function displayWeatherInfo(data) {
          weather:description,id, 
             wind:{speed}, 
             name:city,
-           sys: {country}} = data;
+            sys:{country}} = data;
 
     card.textContent = "";
     card.style.display = `block`;
@@ -95,7 +97,7 @@ function getweatherEmojis(weatherid){
         case weatherid === 800:
             return `☀️`;
         case weatherid > 800:
-            return `☁️`;
+            return `⛅`;
         default:
             return `🌈`;
       }
@@ -113,5 +115,3 @@ function displayerror(message) {
  card.style.display = `flex`;
 
 }
-   
-  
